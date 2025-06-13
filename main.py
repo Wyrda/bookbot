@@ -1,7 +1,8 @@
-from stats import amount_of_characters
+from stats import main as run_stats
 
 def main():
-    return amount_of_characters
+    return run_stats
 
 
-main()
+if __name__ == "__main__":
+    main()
