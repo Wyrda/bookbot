@@ -1,7 +1,7 @@
 from collections import Counter
+import sys
 
-def main():
-    book_path = ("books/frankenstein.txt")
+def main(book_path):
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     counter_dict = dict(amount_of_characters(text))
@@ -12,7 +12,7 @@ def main():
 
 
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
@@ -38,6 +38,3 @@ def get_num_words(text):
 
 def sort_on(dict):
     return dict["num"]
-
-
-main()
